@@ -17,3 +17,7 @@
 ->Important: only the class hierarchy needs to be implemented, the search code for items in lists or collections is not included in the 2nd work
 
 ->You should also create objects of the classes you have implemented in a separate Main class, which will contain the main method
+
+#Java Lab 3:
+
+->Add the implementation of methods lab2
