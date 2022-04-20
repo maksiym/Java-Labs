@@ -1,16 +1,58 @@
 package com.ua.lpnu.lab2;
 
+import com.ua.lpnu.lab2.enums.TypeOfWork;
 import com.ua.lpnu.lab2.machines.*;
+import com.ua.lpnu.lab2.store.WoodworkingMachinesStore;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        WoodworkingMachine machine1 = new ReymusMachine(130, 50.4, 400, "Holzmann", 6);
-        System.out.println(machine1);
-        WoodworkingMachine machine2 = new CircularMachine(200, 80.4, 500, "Jet", 90);
-        System.out.println(machine2);
-        WoodworkingMachine machine3 = new MillingMachine(100, 50, 89.9, "Proma SF", "mechanical");
-        System.out.println(machine3);
+        WoodworkingMachine machine1 = new ReymusMachine(500, 100, 4500, "Holzmann", 6);
+        WoodworkingMachine machine2 = new ReymusMachine(650, 115, 5000, "Holzmann", 6);
+        WoodworkingMachine machine3 = new ReymusMachine(450, 85, 2000, "Jet", 6);
+        WoodworkingMachine machine4 = new MillingMachine(200, 25, 500, "Prom SF", "mechanical");
+        WoodworkingMachine machine5 = new MillingMachine(250, 45, 400, "Prom SF", "computing");
+        WoodworkingMachine machine6 = new MillingMachine(100, 50, 800, "Jet", "auto");
+        WoodworkingMachine machine7 = new CircularMachine(400, 20, 750, "Jet", 5);
+        WoodworkingMachine machine8 = new CircularMachine(350, 15, 600, "Prom SF", 7);
+        WoodworkingMachine machine9 = new CircularMachine(240, 12, 380, "Holzmann", 4);
+
+
+        WoodworkingMachinesStore assortment = new WoodworkingMachinesStore();
+        assortment.addMachineToStore(machine1);
+        assortment.addMachineToStore(machine2);
+        assortment.addMachineToStore(machine3);
+        assortment.addMachineToStore(machine4);
+        assortment.addMachineToStore(machine5);
+        assortment.addMachineToStore(machine6);
+        assortment.addMachineToStore(machine7);
+        assortment.addMachineToStore(machine8);
+        assortment.addMachineToStore(machine9);
+
+        List<WoodworkingMachine> store;
+        assortment.findMachineByBrandAndType(TypeOfWork.MILLING, "Prom SF");
+        System.out.println("Sorted by ascending power: ");
+        store = assortment.sortByPower(true);
+        for (WoodworkingMachine machine : store) {
+            System.out.println(machine);
+        }
+        System.out.println("Sorted by descending power: ");
+        store = assortment.sortByPower(false);
+        for (WoodworkingMachine machine : store) {
+            System.out.println(machine);
+        }
+        System.out.println("Sorted by ascending VPM: ");
+        store = assortment.sortByVolumePerHour(true);
+        for (WoodworkingMachine machine : store) {
+            System.out.println(machine);
+        }
+        System.out.println("Sorted by descending VPM: ");
+        store = assortment.sortByVolumePerHour(false);
+        for (WoodworkingMachine machine : store) {
+            System.out.println(machine);
+        }
 
 
     }
