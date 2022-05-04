@@ -22,9 +22,9 @@
 
 ->Add the implementation of methods lab2
 
-#Java Lab 4:
- 
-->Turn lab2-3 into a maven project
+#Java Lab4:
+
+->Create maven project
 
 #Java Lab 5:
 
