@@ -25,3 +25,11 @@
 #Java Lab 4:
  
 ->Turn lab2-3 into a maven project
+
+#Java Lab 5:
+
+->Write modular tests for lab4
+
+#Java Lab 6:
+
+->Implement code entry in a CSV file and verify code with checkstyle plugins and spotbugs and write tests

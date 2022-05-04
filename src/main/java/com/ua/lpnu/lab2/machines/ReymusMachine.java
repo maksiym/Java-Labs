@@ -1,10 +1,16 @@
 package com.ua.lpnu.lab2.machines;
 
 import com.ua.lpnu.lab2.enums.TypeOfWork;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Setter
+@Getter
 public class ReymusMachine extends WoodworkingMachine {
 
     private int numberOfTypes;
+
     public ReymusMachine(int powerInWatts, double woodVolumePerHour, double priceOfMachine,
                          String manufacturerName, int numberOfTypes) {
         super(powerInWatts, woodVolumePerHour, priceOfMachine, manufacturerName);
