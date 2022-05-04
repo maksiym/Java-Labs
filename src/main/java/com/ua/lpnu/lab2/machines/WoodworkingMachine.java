@@ -4,13 +4,14 @@ import com.ua.lpnu.lab2.enums.TypeOfWork;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 public abstract class WoodworkingMachine {
 
     private String manufacturerName;
-    private int powerInWatts;
     private double woodVolumePerHour;
+    private int powerInWatts;
     private double priceOfMachine;
     TypeOfWork typeOfWork;
 
@@ -27,4 +28,15 @@ public abstract class WoodworkingMachine {
                         "price - %.1f, type of work - %s", manufacturerName, woodVolumePerHour, powerInWatts,
                 priceOfMachine, typeOfWork);
     }
+
+    public String getHeaders() {
+        return "Manufacturer Name;Wood VPM;Power;Price;Type;";
+    }
+
+    public String toCSV () {
+        return String.format("%s;%.1f;%d;%.1f;%s;", getManufacturerName(), getWoodVolumePerHour(), getPowerInWatts(),
+                getPriceOfMachine(), getTypeOfWork());
+    }
+
+
 }

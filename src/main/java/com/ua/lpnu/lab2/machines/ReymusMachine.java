@@ -23,4 +23,14 @@ public class ReymusMachine extends WoodworkingMachine {
         return super.toString() + String.format(", number of types - %d", numberOfTypes);
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + "Types;";
+    }
+
+    @Override
+    public String toCSV () {
+        return super.toCSV() + getNumberOfTypes() + ";";
+    }
+
 }

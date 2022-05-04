@@ -23,5 +23,15 @@ public class MillingMachine extends WoodworkingMachine {
         return super.toString()+String.format(", type of control - %s", typeOfControl);
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + "Control Type;";
+    }
+
+    @Override
+    public String toCSV () {
+        return super.toCSV() + getTypeOfControl() + ";";
+    }
+
 
 }
