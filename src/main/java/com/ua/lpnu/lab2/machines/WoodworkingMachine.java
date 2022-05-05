@@ -15,7 +15,8 @@ public abstract class WoodworkingMachine {
     private double priceOfMachine;
     TypeOfWork typeOfWork;
 
-    protected WoodworkingMachine(int powerInWatts, double woodVolumePerHour, double priceOfMachine, String manufacturerName) {
+    protected WoodworkingMachine(int powerInWatts, double woodVolumePerHour, double priceOfMachine,
+                                 String manufacturerName) {
         this.powerInWatts = powerInWatts;
         this.woodVolumePerHour = woodVolumePerHour;
         this.priceOfMachine = priceOfMachine;
@@ -24,8 +25,8 @@ public abstract class WoodworkingMachine {
 
     @Override
     public String toString() {
-        return String.format("Manufacturer name - %s, VPM - %.1f, power - %d, "+
-                        "price - %.1f, type of work - %s", manufacturerName, woodVolumePerHour, powerInWatts,
+        return String.format("Manufacturer name - %s, VPM - %.1f, power - %d, "
+                        + "price - %.1f, type of work - %s", manufacturerName, woodVolumePerHour, powerInWatts,
                 priceOfMachine, typeOfWork);
     }
 
