@@ -25,12 +25,12 @@ public class CircularMachine extends WoodworkingMachine {
 
     @Override
     public String getHeaders() {
-        return super.getHeaders() + "Danger Level;";
+        return super.getHeaders() + ",'Danger Level'";
     }
 
     @Override
     public String toCSV () {
-        return super.toCSV() + getLevelOfDanger() + ";";
+        return super.toCSV() + String.format(",'%d'", levelOfDanger);
     }
 
 }

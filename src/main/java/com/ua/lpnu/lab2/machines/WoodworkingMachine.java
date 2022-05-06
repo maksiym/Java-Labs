@@ -31,13 +31,12 @@ public abstract class WoodworkingMachine {
     }
 
     public String getHeaders() {
-        return "Manufacturer Name;Wood VPM;Power;Price;Type;";
+        return "'Manufacturer Name','Wood VPM','Power','Price','Type'";
     }
 
     public String toCSV () {
-        return String.format("%s;%.1f;%d;%.1f;%s;", getManufacturerName(), getWoodVolumePerHour(), getPowerInWatts(),
-                getPriceOfMachine(), getTypeOfWork());
+        return String.format("'%s','%.1f','%d','%.1f','%s'", manufacturerName, woodVolumePerHour, powerInWatts,
+                priceOfMachine, typeOfWork);
     }
-
 
 }

@@ -25,12 +25,12 @@ public class MillingMachine extends WoodworkingMachine {
 
     @Override
     public String getHeaders() {
-        return super.getHeaders() + "Control Type;";
+        return super.getHeaders() + ",'Control Type'";
     }
 
     @Override
     public String toCSV () {
-        return super.toCSV() + getTypeOfControl() + ";";
+        return super.toCSV() + String.format(",'%s'", typeOfControl);
     }
 
 
