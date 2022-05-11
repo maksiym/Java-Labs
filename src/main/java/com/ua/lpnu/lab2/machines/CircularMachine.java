@@ -20,7 +20,7 @@ public class CircularMachine extends WoodworkingMachine {
 
     @Override
     public String toString() {
-        return super.toString()+String.format(", level of danger - %d", levelOfDanger);
+        return super.toString() + String.format(", level of danger - %d", levelOfDanger);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class CircularMachine extends WoodworkingMachine {
     }
 
     @Override
-    public String toCSV () {
+    public String toCSV() {
         return super.toCSV() + String.format(",'%d'", levelOfDanger);
     }
 

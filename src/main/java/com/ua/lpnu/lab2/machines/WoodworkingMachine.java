@@ -26,17 +26,17 @@ public abstract class WoodworkingMachine {
     @Override
     public String toString() {
         return String.format("Manufacturer name - %s, VPM - %.1f, power - %d, "
-                        + "price - %.1f, type of work - %s", manufacturerName, woodVolumePerHour, powerInWatts,
-                priceOfMachine, typeOfWork);
+                        + "price - %.1f, type of work - %s", manufacturerName,
+                woodVolumePerHour, powerInWatts, priceOfMachine, typeOfWork);
     }
 
     public String getHeaders() {
         return "'Manufacturer Name','Wood VPM','Power','Price','Type'";
     }
 
-    public String toCSV () {
-        return String.format("'%s','%.1f','%d','%.1f','%s'", manufacturerName, woodVolumePerHour, powerInWatts,
-                priceOfMachine, typeOfWork);
+    public String toCSV() {
+        return String.format("'%s','%.1f','%d','%.1f','%s'", manufacturerName,
+                woodVolumePerHour, powerInWatts, priceOfMachine, typeOfWork);
     }
 
 }

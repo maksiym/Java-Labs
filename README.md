@@ -33,3 +33,7 @@
 #Java Lab 6:
 
 ->Implement code entry in a CSV file and verify code with checkstyle plugins and spotbugs and write tests
+
+#Java Lab 7:
+
+->Implement the output of text fragments contained in html tags <span>, <strong>, <table> using regular expressions
