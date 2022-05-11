@@ -36,4 +36,4 @@
 
 #Java Lab 7:
 
-->Implement the output of text fragments contained in html tags <span>, <strong>, <table> using regular expressions
+->Implement the output of text fragments contained in html tags using regular expressions
