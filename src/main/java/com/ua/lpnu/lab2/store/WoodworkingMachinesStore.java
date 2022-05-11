@@ -1,13 +1,15 @@
 package com.ua.lpnu.lab2.store;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Comparator;
+
 import com.ua.lpnu.lab2.enums.TypeOfSort;
 import com.ua.lpnu.lab2.enums.TypeOfWork;
-import com.ua.lpnu.lab2.machines.*;
+import com.ua.lpnu.lab2.machines.WoodworkingMachine;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+
 
 @Getter
 @Setter
@@ -27,7 +29,8 @@ public class WoodworkingMachinesStore {
         storeMachines.add(machine);
     }
 
-    public List<WoodworkingMachine> findMachineByBrandAndType(TypeOfWork type, String manufacturerName) {
+    public List<WoodworkingMachine> findMachineByBrandAndType(TypeOfWork type,
+                                                              String manufacturerName) {
         searchResult = storeMachines.stream()
                 .filter(machine -> machine.getTypeOfWork().equals(type))
                 .filter(machine -> machine.getManufacturerName().equals(manufacturerName))
