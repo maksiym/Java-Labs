@@ -1,7 +1,12 @@
 package com.ua.lpnu.lab2.machines;
 
 import com.ua.lpnu.lab2.enums.TypeOfWork;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Setter
+@Getter
 public class CircularMachine extends WoodworkingMachine {
 
     private int levelOfDanger;
@@ -18,5 +23,14 @@ public class CircularMachine extends WoodworkingMachine {
         return super.toString()+String.format(", level of danger - %d", levelOfDanger);
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",'Danger Level'";
+    }
+
+    @Override
+    public String toCSV () {
+        return super.toCSV() + String.format(",'%d'", levelOfDanger);
+    }
 
 }

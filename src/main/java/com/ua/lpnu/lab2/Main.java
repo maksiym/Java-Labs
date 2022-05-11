@@ -1,14 +1,14 @@
 package com.ua.lpnu.lab2;
 
+import com.ua.lpnu.lab2.enums.TypeOfSort;
 import com.ua.lpnu.lab2.enums.TypeOfWork;
 import com.ua.lpnu.lab2.machines.*;
 import com.ua.lpnu.lab2.store.WoodworkingMachinesStore;
-
 import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
-        List<WoodworkingMachine> store;
 
         WoodworkingMachine machine1 = new ReymusMachine(500, 100, 4500, "Holzmann", 6);
         WoodworkingMachine machine2 = new ReymusMachine(650, 115, 5000, "Holzmann", 6);
@@ -19,7 +19,6 @@ public class Main {
         WoodworkingMachine machine7 = new CircularMachine(400, 20, 750, "Jet", 5);
         WoodworkingMachine machine8 = new CircularMachine(350, 15, 600, "Prom SF", 7);
         WoodworkingMachine machine9 = new CircularMachine(240, 12, 380, "Holzmann", 4);
-
 
         WoodworkingMachinesStore assortment = new WoodworkingMachinesStore();
         assortment.addMachineToStore(machine1);
@@ -32,21 +31,22 @@ public class Main {
         assortment.addMachineToStore(machine8);
         assortment.addMachineToStore(machine9);
 
+        List<WoodworkingMachine> store;
         store = assortment.findMachineByBrandAndType(TypeOfWork.MILLING, "Prom SF");
         if (store.isEmpty()) {
             System.out.println("No machines found! :(");
         } else {
             System.out.println("Sorted by ascending power: ");
-            store = assortment.sortByPower(true);
+            store = assortment.sortByPower(TypeOfSort.ASCENDING);
             store.forEach(System.out::println);
             System.out.println("Sorted by descending power: ");
-            store = assortment.sortByPower(false);
+            store = assortment.sortByPower(TypeOfSort.DESCENDING);
             store.forEach(System.out::println);
             System.out.println("Sorted by ascending VPM: ");
-            store = assortment.sortByVolumePerHour(true);
+            store = assortment.sortByVolumePerHour(TypeOfSort.ASCENDING);
             store.forEach(System.out::println);
             System.out.println("Sorted by descending VPM: ");
-            store = assortment.sortByVolumePerHour(false);
+            store = assortment.sortByVolumePerHour(TypeOfSort.DESCENDING);
             store.forEach(System.out::println);
         }
 

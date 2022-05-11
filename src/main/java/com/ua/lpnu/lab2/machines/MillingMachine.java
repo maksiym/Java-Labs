@@ -1,7 +1,12 @@
 package com.ua.lpnu.lab2.machines;
 
 import com.ua.lpnu.lab2.enums.TypeOfWork;
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Setter
+@Getter
 public class MillingMachine extends WoodworkingMachine {
 
     private String typeOfControl;
@@ -17,5 +22,16 @@ public class MillingMachine extends WoodworkingMachine {
     public String toString() {
         return super.toString()+String.format(", type of control - %s", typeOfControl);
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",'Control Type'";
+    }
+
+    @Override
+    public String toCSV () {
+        return super.toCSV() + String.format(",'%s'", typeOfControl);
+    }
+
 
 }
