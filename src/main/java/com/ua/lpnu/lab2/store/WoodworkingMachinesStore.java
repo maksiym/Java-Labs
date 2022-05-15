@@ -1,6 +1,5 @@
 package com.ua.lpnu.lab2.store;
 
-
 import com.ua.lpnu.lab2.enums.TypeOfSort;
 import com.ua.lpnu.lab2.enums.TypeOfWork;
 import com.ua.lpnu.lab2.machines.WoodworkingMachine;
@@ -58,15 +57,11 @@ public class WoodworkingMachinesStore {
                     .toList();
         } else {
             searchResult = searchResult.stream()
-                    .sorted(Comparator.comparing(WoodworkingMachine::getWoodVolumePerHour).reversed())
+                    .sorted(Comparator.comparing(WoodworkingMachine::getWoodVolumePerHour)
+                            .reversed())
                     .toList();
         }
         return searchResult;
     }
 
 }
-
-
-
-
-

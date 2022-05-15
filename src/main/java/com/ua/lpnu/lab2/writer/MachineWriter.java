@@ -1,6 +1,5 @@
 package com.ua.lpnu.lab2.writer;
 
-
 import com.ua.lpnu.lab2.machines.WoodworkingMachine;
 import java.io.FileWriter;
 import java.io.IOException;

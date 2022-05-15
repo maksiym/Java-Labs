@@ -55,7 +55,8 @@ public class Main {
         }
 
         final String originalString = "<span>The regular expression test</span>" +
-                "<strong>LOL <span>Something like text</span></strong><table><id>svt3<id></table><span>111</span>";
+                "<strong>LOL <span>Something like text</span></strong><table><id>svt3<id>" +
+                "</table><span>111</span>";
         RegExHTMLTags regex = new RegExHTMLTags();
         regex.findTextInTags(originalString);
 
