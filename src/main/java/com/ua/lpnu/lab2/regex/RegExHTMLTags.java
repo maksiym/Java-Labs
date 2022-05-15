@@ -1,11 +1,10 @@
 package com.ua.lpnu.lab2.regex;
 
 import org.apache.commons.lang.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Comparator;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,16 +13,16 @@ public class RegExHTMLTags {
 
     public List<String> findTextInTags(final String originalString) {
 
-        final String htmlRegexSentence = "(<span>(.+?)</span>)+|(<strong>(.+?)</strong>)+|(<table>(.+?)</table>)+";
-        final String htmlRemover = "(<span>|</span>|<strong>|</strong>|<table>|</table>)+";
+        final String htmlStringRegex = "(<span>(.+?)</span>)+|(<strong>(.+?)</strong>)+|(<table>(.+?)</table>)+";
+        final String htmlTagsRemover = "(<span>|</span>|<strong>|</strong>|<table>|</table>)+";
         List<String> foundedWords = new ArrayList<>();
         String[] fW1;
 
-        Pattern pattern = Pattern.compile(htmlRegexSentence);
+        Pattern pattern = Pattern.compile(htmlStringRegex);
         Matcher matcher = pattern.matcher(originalString);
 
         while (matcher.find()) {
-            fW1 = StringUtils.split(matcher.group().replaceAll(htmlRemover, ""));
+            fW1 = StringUtils.split(matcher.group().replaceAll(htmlTagsRemover, " "));
             Collections.addAll(foundedWords, fW1);
         }
 
