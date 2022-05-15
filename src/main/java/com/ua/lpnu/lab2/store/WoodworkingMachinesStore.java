@@ -7,22 +7,13 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import lombok.Getter;
-import lombok.Setter;
 
 
 @Getter
-@Setter
 public class WoodworkingMachinesStore {
 
     private List<WoodworkingMachine> storeMachines = new ArrayList<>();
     private List<WoodworkingMachine> searchResult = new ArrayList<>();
-
-    public WoodworkingMachinesStore() {
-    }
-
-    public WoodworkingMachinesStore(List<WoodworkingMachine> storeMachines) {
-        this.storeMachines = storeMachines;
-    }
 
     public void addMachineToStore(WoodworkingMachine machine) {
         storeMachines.add(machine);
