@@ -2,7 +2,11 @@ package com.ua.lpnu.lab2;
 
 import com.ua.lpnu.lab2.enums.TypeOfSort;
 import com.ua.lpnu.lab2.enums.TypeOfWork;
-import com.ua.lpnu.lab2.machines.*;
+import com.ua.lpnu.lab2.machines.CircularMachine;
+import com.ua.lpnu.lab2.machines.MillingMachine;
+import com.ua.lpnu.lab2.machines.ReymusMachine;
+import com.ua.lpnu.lab2.machines.WoodworkingMachine;
+import com.ua.lpnu.lab2.regex.RegExHTMLTags;
 import com.ua.lpnu.lab2.store.WoodworkingMachinesStore;
 import java.util.List;
 
@@ -50,6 +54,11 @@ public class Main {
             store.forEach(System.out::println);
         }
 
+        final String originalString = "<span>The regular expression test</span>" +
+                "<strong>LOL <span>Something like text</span></strong><table><id>svt3<id>" +
+                "</table><span>111</span>";
+        RegExHTMLTags regex = new RegExHTMLTags();
+        regex.findTextInTags(originalString);
 
     }
 }

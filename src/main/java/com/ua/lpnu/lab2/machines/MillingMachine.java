@@ -20,7 +20,7 @@ public class MillingMachine extends WoodworkingMachine {
 
     @Override
     public String toString() {
-        return super.toString()+String.format(", type of control - %s", typeOfControl);
+        return super.toString() + String.format(", type of control - %s", typeOfControl);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class MillingMachine extends WoodworkingMachine {
     }
 
     @Override
-    public String toCSV () {
+    public String toCSV() {
         return super.toCSV() + String.format(",'%s'", typeOfControl);
     }
 

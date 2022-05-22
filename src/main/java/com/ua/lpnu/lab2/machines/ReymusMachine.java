@@ -29,7 +29,7 @@ public class ReymusMachine extends WoodworkingMachine {
     }
 
     @Override
-    public String toCSV () {
+    public String toCSV() {
         return super.toCSV() + String.format(",'%d'", numberOfTypes);
     }
 

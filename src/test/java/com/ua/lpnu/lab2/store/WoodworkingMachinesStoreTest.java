@@ -14,8 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class WoodworkingMachinesStoreTest {
 
     private List<WoodworkingMachine> testingList;
@@ -38,7 +36,7 @@ class WoodworkingMachinesStoreTest {
     }
 
     @Test
-    void addMachineToStoreTest() throws Exception {
+    void addMachineToStoreTest() {
         WoodworkingMachine machine5 = new MillingMachine(100, 50, 800, "Jet", "auto");
         store.addMachineToStore(machine5);
 
@@ -50,7 +48,7 @@ class WoodworkingMachinesStoreTest {
     }
 
     @Test
-    void findMachineByBrandAndTypeTest() throws Exception {
+    void findMachineByBrandAndTypeTest() {
 
         List<WoodworkingMachine> searchResult;
         searchResult = store.findMachineByBrandAndType(TypeOfWork.MILLING, "Prom SF");
@@ -63,7 +61,7 @@ class WoodworkingMachinesStoreTest {
     }
 
     @Test
-    void sortByPowerTest() throws Exception {
+    void sortByPowerTest() {
 
         List<WoodworkingMachine> expectedListD;
         List<WoodworkingMachine> expectedListA;
@@ -81,7 +79,7 @@ class WoodworkingMachinesStoreTest {
     }
 
     @Test
-    void sortByVolumePerHourTest() throws Exception {
+    void sortByVolumePerHourTest() {
 
         List<WoodworkingMachine> expectedListD;
         List<WoodworkingMachine> expectedListA;
